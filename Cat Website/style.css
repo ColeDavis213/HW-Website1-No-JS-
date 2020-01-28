@@ -1,39 +1,219 @@
 body {
-
     background-color: #fafafb;
-    
+    font-family: Ariel, sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+#top{
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 #locked-bar
 {
-    
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    min-height: 86px;
-    min-width: auto;
-    background-image:url('images/Sad Cat Art2.png');
+  min-height: 86px;
+  background-image:url('images/Sad Cat Art2.png');
+  text-align: center;
 }
 
-div {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-    animation-name: example;
-    animation-duration: 4s;
+#navbar{
+    height: 30px;
+    background-color: rgb(15, 15, 15);
+    text-align: center;
+    padding-left: 80px;
+}
+
+#navbar ul{
+  padding: 0;
+  list-style: none;
+  margin-top: 0px; 
+}
+
+#navbar li{
+  display: inline;
+}
+
+#navbar a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  padding-right: 80px;
+}
+
+.title{
+  text-align: center;
+  text-shadow: 3px 2px #000000;
+  font-size: 22px;
+  padding-top: 20px;
+
+  animation-name: title-color-shift;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes title-color-shift {
+  from {color: rgb(25, 218, 218);}
+  to {color: rgb(247, 73, 174);}
+}
+
+.display {
+  float: left;
+  width: 50%;
+  padding-top: 50px;
+}
+
+#history img{
+  padding-top: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#history p{
+  text-align: center;
+}
+
+table{
+  width:100%;
+  font-size: 20px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin-top: 40px;
+}
+th{
+  text-align: left;
+  font-size: 25px;
+}
+th, td {
+  padding: 5px;
+}
+
+#stats-table caption{
+  font-size: 35px;
+  padding-bottom: 5px;
+
+}
+
+#stats-table tr:nth-child(odd){ 
+	animation-name: odd-color-change;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#stats-table tr:nth-child(even){
+	animation-name: even-color-change;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes odd-color-change {
+  from {background: #c3eeeb;}
+  to {background: #f1d2e5;}
+}
+@keyframes even-color-change {
+  from {background: #f1d2e5;}
+  to {background: #c3eeeb;}
+}
+
+#merch{
+  margin-top: 50px;
+}
+
+#merch h2{
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#merch p{
+  text-align: center;
+  padding-top: 20px;
+  padding-right: 80px;
+  font-size: 25px;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+.row::after {
+  clear: both;
+  display: table;
+}
+
+#button{
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+#button h1{
+  display: inline;
+  font-size: 40px;
+  text-align: center;
+  border:5px black solid;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 200px;
+  padding-right: 200px;
+  text-decoration: none;
+
+  animation-name: button-color-shift;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#button a{
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+@keyframes button-color-shift{
+  from {border:6px rgb(25, 218, 218) solid;}
+  to {border:6px rgb(247, 73, 174) solid;}
+}
+
+
+
+@media(max-width: 900px){
+  .display{
+    width: 100%;
+    float: none;
   }
-  
-  /* Safari 4.0 - 8.0 */
-  @-webkit-keyframes example {
-    from {background-color: red;}
-    to {background-color: yellow;}
-  }
-  
-  /* Standard syntax */
-  @keyframes example {
-    from {background-color: red;}
-    to {background-color: yellow;}
-  }
+}
+
